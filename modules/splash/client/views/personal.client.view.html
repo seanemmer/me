@@ -1,0 +1,119 @@
+<section data-ng-controller="PersonalController">
+	<div layout="row" layout-align="space-around" class="personal-selector">
+		<div layout="row" layout-align="center center" class="life-circle-container">
+			<div ng-click="setLocation('florida')" class="life-circle md-whiteframe-z1">
+				<h3>Florida</h3>
+			</div>
+		</div>
+		<div layout="row" layout-align="center center" class="life-circle-container">
+			<div ng-click="setLocation('princeton')" class="life-circle md-whiteframe-z1">
+				<h3>Princeton</h3>
+			</div>
+		</div>
+		<div layout="row" layout-align="center center" class="life-circle-container">
+			<div ng-click="setLocation('newyork')" class="life-circle md-whiteframe-z1">
+				<h3>New York</h3>
+			</div>
+		</div>
+		<div layout="row" layout-align="center center" class="life-circle-container">
+			<div ng-click="setLocation('europe')" class="life-circle md-whiteframe-z1">
+				<h3>Europe</h3>
+			</div>
+		</div>
+	</div>
+	<div class="personal-content" layout="column" layout-align="start center" ng-switch="location">
+	  <div ng-switch-when="welcome">
+		  <div layout="column" layout-align="start center">
+		  <br><br><br>
+		  	<h2 class="text-center">Each of these places is a special part of who I am and what I've done</h2>
+		  	<h3>Go ahead, have a click!</h3>
+		  </div>
+	  </div>
+
+	  
+	  <div ng-switch-when="florida">
+		  <div layout="column" layout-align="start center">
+		  	<h2>Florida</h2>
+		  	<h3>The Sunshine State</h3>
+		  </div>
+		  <div layout="column" layout-align="start start">
+			<h4>Education</h4>
+				<p>
+				 Pine Crest School for 14 years. Favorite classes were Economics, Journalism, World History, and Ethics. Participated in Debate, Track &amp Field, and Film Club.
+				</p>
+			<h4>Interests</h4>
+				<p>
+				Guitar (I still play my dark blue Fender Stratocaster and Taylor Acoustic), wakeboarding, surfing, snowboarding, computers (taking them apart), graphic design (photoshop + illustrator).
+				</p>
+			<h4>Favorite Experiences</h4>
+				<p>
+				Eating my mother's Cuban food, slumber-parties during Hurricane season, seeing the Stealth Bomber at the annual Air &amp Sea Show, cutting down fresh coconuts in our backyard.
+				</p>
+		  </div>
+	  </div>
+
+	  <div ng-switch-when="princeton">
+		  <div layout="column" layout-align="start center">
+		  	<h2>Princeton</h2>
+		  	<h3>Orange &amp Black</h3>
+		  </div>
+		  <div layout="column" layout-align="start start">
+			<h4>Education</h4>
+				<p>
+				 Liberal Arts studies with a concentration in Economics.  Graduated Cum Laude, conducting independent research on semiconductor innovation under 2011 Nobel Laureate, Christopher Sims. Computer Science coursework included Object-Oriented Programming, Mobile Telecommunications, and Statistics/Data Analysis.
+				</p>
+			<h4>Interests</h4>
+				<p>
+				Academically: modern art/architecture, molecular biology, and philosophy.  Socially: countless good times with Tiger Inn eating club and AEPi fraternity.  Actively:  squash, soccer, and skateboarding.  Spiritually: Zen, meditation, and yoga.
+				</p>
+			<h4>Favorite Experiences</h4>
+				<p>
+				100+ person snowball fight between TI and Ivy after the 2010 blizzard; turning in the final draft of my Senior Thesis; NYC and Philly scavenger hunts; lectures by Brian Kernighan, Bonnie Bassler, and Beth Bogan; Reunions!  
+				</p>
+		  </div>
+	  </div>
+
+	  <div ng-switch-when="newyork">
+		  <div layout="column" layout-align="start center">
+		  	<h2>New York City</h2>
+		  	<h3>Broadway Boogie Woogie</h3>
+		  </div>
+		  <div layout="column" layout-align="start start">
+			<h4>Career</h4>
+				<p>
+				 Summer internships with Memrise.com and Macmillan Ventures.  Three great years at BlackRock, in a dream role that combined financial engineering with client interaction.  Built advanced tools for simulating portfolio risk, optimizing portfolio construction, and modeling historical data.  Pitched and presented analytical content to executives at major corporate and government institutions.
+				</p>
+			<h4>Interests</h4>
+				<p>
+				Exploring a city of mythic proportions - concerts, museums, parks, nightlife, restaurants (especially BBQ), escaping the cold, escaping the heat, the subway, the Met, speakeasies, gritty, posh, everything and anything all at once.   
+				</p>
+			<h4>Favorite Experiences</h4>
+				<p>
+				Brisket at Mighty Quinn's Barbeque, Summer Stage concerts in Central Park (Disclosure and Bonobo!), Koons retrospective at the Whitney, everything at 7th St and Avenue A.
+				</p>
+		  </div>
+	  </div>	
+
+	  <div ng-switch-when="europe">
+		  <div layout="column" layout-align="start center">
+		  	<h2>Europe</h2>
+		  	<h3>Planes, Trains, and Automobiles</h3>
+		  </div>
+		  <div layout="column" layout-align="start start">
+			<h4>Projects</h4>
+				<p>
+				 Returned to my passion for technology, immersing myself in full-stack development through books, tutorials, and projects. Co-founded and built concierge platform for the resort-hotel space (successfully licensed to a 600-room property in Mexico).  Built multiple very cool applications you can and should check out <a ui-sref="projects"> here</a>.
+				</p>
+			<h4>International Adventure</h4>
+				<p>
+				Basing primarily out of Barcelona, traveled throughout Europe including Spain, England, Italy, Croatia, and Greece.  Searched for wifi oases in the European desert.  New friends, new experiences, new perspectives.
+				</p>
+			<h4>Favorite Experiences</h4>
+				<p>
+				Wandering Rome all night before a 6am flight; pushing my first app to production; communicating entirely in Spanish for 3 months; setting off fireworks on New Year's Eve; consuming Jamón Ibérico, burrata, and vino tinto in large quantities.
+				</p>
+		  </div>
+	  </div>			
+
+	</div>
+</section>

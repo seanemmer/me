@@ -1,0 +1,50 @@
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+/* General */
+.text-center {
+  text-align: center; }
+
+.content {
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  color: rgba(0, 0, 0, 0.87); }
+
+.undecorated-link:hover {
+  text-decoration: none; }
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important; }
+
+.ng-invalid.ng-dirty {
+  border-color: #FA787E; }
+
+.ng-valid.ng-dirty {
+  border-color: #78FA89; }
+
+/* Header */
+md-fab-speed-dial md-icon {
+  margin-top: -8px !important;
+  color: white !important; }
+
+/* Home page */
+.jumbotron {
+  margin-top: 50px;
+  width: 452px; }
+  .jumbotron .jumbotron-header {
+    font-size: 96px;
+    margin-bottom: 24px; }
+  .jumbotron .jumbotron-subheader {
+    line-height: 2.2em;
+    font-size: 24px; }
+  .jumbotron md-fab-speed-dial {
+    position: absolute;
+    top: 231px;
+    right: calc(50% - 188px); }

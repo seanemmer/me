@@ -1,0 +1,48 @@
+<section data-ng-controller="ProjectsController">
+	<div class="grid-list-container" layout="row" layout-align="center">
+		<md-grid-list md-cols="3" md-cols-sm="1" md-gutter="0.6em" md-row-height="4:3" md-row-height-sm="2:1" flex>
+			<md-grid-tile ng-click="projectDialog('mongoose', $event)" class="red">
+				<div layout="column">
+					Mongoose-Seed
+					<i class="fa fa-cube fa-2x"></i>
+				</div>
+			</md-grid-tile>
+			<md-grid-tile ng-click="projectDialog('justvacay', $event)" class="green" md-colspan="2" md-colspan-sm="1">
+				<div layout="column">
+					JustVacay
+					<i class="fa fa-life-ring fa-2x"></i>
+				</div>
+			</md-grid-tile>
+			<md-grid-tile ng-click="projectDialog('electrode', $event)" class="cyan" md-rowspan="2" md-rowspan-sm="1">
+				<div layout="column">
+					Electrode
+					<i class="fa fa-bolt fa-2x"></i>
+				</div>
+			</md-grid-tile>
+			<md-grid-tile ng-click="projectDialog('skillset', $event)" class="dark-blue">
+				<div layout="column">
+					<strong>Core Skillset</strong>
+					<i class="fa fa-laptop fa-4x"></i>
+				</div>
+			</md-grid-tile>
+			<md-grid-tile ng-click="projectDialog('clickstarter', $event)" class="blue">
+				<div layout="column">
+					Clickstarter
+					<i class="fa fa-mouse-pointer fa-lg"></i>
+				</div>
+			</md-grid-tile>
+			<md-grid-tile ng-click="projectDialog('artwalker', $event)" class="pink">
+				<div layout="column">
+					Artwalker
+					<i class="fa fa-map-o fa-2x"></i>
+				</div>
+			</md-grid-tile>
+			<md-grid-tile ng-click="projectDialog('more', $event)" class="indigo">
+				<div layout="column">
+					And more!
+					<i class="fa fa-files-o fa-2x"></i>
+				</div>
+			</md-grid-tile>
+		</md-grid-list>
+	</div>
+</section>
