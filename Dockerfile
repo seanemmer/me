@@ -1,24 +1,28 @@
-FROM heroku/cedar:14
+FROM node:0.10
 
-RUN useradd -d /app -m app
-USER app
-WORKDIR /app
+MAINTAINER Sean Emmer, sean.emmer@gmail.com
 
-ENV HOME /app
-ENV NODE_ENGINE >=0.10.28
-ENV PORT 3000
+WORKDIR /home/sde
 
-RUN mkdir -p /app/heroku/node
-RUN mkdir -p /app/src
-RUN curl -s https://s3pository.heroku.com/node/v$NODE_ENGINE/node-v$NODE_ENGINE-linux-x64.tar.gz | tar --strip-components=1 -xz -C /app/heroku/node
-ENV PATH /app/heroku/node/bin:$PATH
+# Install Mean.JS Prerequisites
+RUN npm install -g gulp-cli
+RUN npm install -g bower
 
-RUN mkdir -p /app/.profile.d
-RUN echo "export PATH=\"/app/heroku/node/bin:/app/bin:/app/src/node_modules/.bin:\$PATH\"" > /app/.profile.d/nodejs.sh
-RUN echo "cd /app/src" >> /app/.profile.d/nodejs.sh
-WORKDIR /app/src
+# Install Mean.JS packages
+ADD package.json /home/sde/package.json
+RUN npm install
 
-EXPOSE 3000
+# Manually trigger bower. Why doesnt this work via npm install?
+ADD .bowerrc /home/mean/.bowerrc
+ADD bower.json /home/sde/bower.json
+RUN bower install --config.interactive=false --allow-root
 
-ONBUILD COPY . /app/src
-ONBUILD RUN npm install
+# Make everything available for start
+ADD . /home/sde
+
+# Set production environment as default
+ENV NODE_ENV production
+
+# Port 8443 for server
+EXPOSE 8443
+CMD ["gulp", "prod"]
