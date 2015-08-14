@@ -86,7 +86,7 @@ angular.module('splash').controller('ProjectsController', ['$scope', '$mdDialog'
 				controller: 'DialogController',
 				templateUrl: dialogTemplate,
 				targetEvent: event,
-				clickOutsideToClose: true,
+				clickOutsideToClose: false,
 				locals: dialogLocals
 			});
 		};
