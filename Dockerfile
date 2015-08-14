@@ -1,29 +1,24 @@
-FROM node:0.10
+FROM heroku/cedar:14
 
-MAINTAINER Matthias Luebken, matthias@catalyst-zero.com
+RUN useradd -d /app -m app
+USER app
+WORKDIR /app
 
-WORKDIR /home/mean
+ENV HOME /app
+ENV NODE_ENGINE >=0.10.28
+ENV PORT 3000
 
-# Install Mean.JS Prerequisites
-RUN npm install -g grunt-cli
-RUN npm install -g bower
+RUN mkdir -p /app/heroku/node
+RUN mkdir -p /app/src
+RUN curl -s https://s3pository.heroku.com/node/v$NODE_ENGINE/node-v$NODE_ENGINE-linux-x64.tar.gz | tar --strip-components=1 -xz -C /app/heroku/node
+ENV PATH /app/heroku/node/bin:$PATH
 
-# Install Mean.JS packages
-ADD package.json /home/mean/package.json
-RUN npm install
+RUN mkdir -p /app/.profile.d
+RUN echo "export PATH=\"/app/heroku/node/bin:/app/bin:/app/src/node_modules/.bin:\$PATH\"" > /app/.profile.d/nodejs.sh
+RUN echo "cd /app/src" >> /app/.profile.d/nodejs.sh
+WORKDIR /app/src
 
-# Manually trigger bower. Why doesnt this work via npm install?
-ADD .bowerrc /home/mean/.bowerrc
-ADD bower.json /home/mean/bower.json
-RUN bower install --config.interactive=false --allow-root
+EXPOSE 3000
 
-# Make everything available for start
-ADD . /home/mean
-
-# Set development environment as default
-ENV NODE_ENV development
-
-# Port 3000 for server
-# Port 35729 for livereload
-EXPOSE 3000 35729
-CMD ["grunt"]
+ONBUILD COPY . /app/src
+ONBUILD RUN npm install

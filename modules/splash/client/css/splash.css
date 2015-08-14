@@ -1,10 +1,9 @@
 /* Personal Page */
-.personal-selector {
-  height: 220px; }
-
+/* .personal-selector {
+	height: 220px;
+} */
 .life-circle-container {
-  height: 170px;
-  width: 170px; }
+  height: 170px; }
 
 .life-circle {
   height: 160px;
@@ -44,6 +43,7 @@
   background-position: center; }
 
 .personal-content > div {
+  margin-top: 48px;
   width: 80%; }
 
 .personal-content h2 {
@@ -64,6 +64,17 @@
 .personal-content p {
   margin-top: 0;
   margin-bottom: 14px; }
+
+@media (max-width: 800px) {
+  .life-circle-container {
+    height: 65px !important; }
+  .life-circle {
+    border-radius: 0 !important;
+    height: 60px !important; }
+    .life-circle h3 {
+      margin-top: 18px !important; }
+  .personal-content > div {
+    width: 95%; } }
 
 /* Projects Page */
 .cyan {
@@ -112,6 +123,7 @@ md-grid-tile:hover {
 .project-dialog md-list md-icon {
   margin-top: 24px;
   margin-right: 16px;
+  color: black;
   color: rgba(0, 0, 0, 0.54) !important; }
 
 .project-dialog a {
@@ -120,3 +132,43 @@ md-grid-tile:hover {
 @media (max-width: 420px) {
   .project-dialog md-list md-icon {
     display: none; } }
+
+/* Contact Page */
+.contact-info .contact-header {
+  margin-bottom: 12px;
+  text-align: center; }
+
+.contact-info .contact-subheader {
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 24px;
+  font-style: italic; }
+
+.contact-info a {
+  font-size: 22px;
+  word-wrap: break-word; }
+
+.contact-info md-list-item md-icon {
+  margin-bottom: 18px;
+  margin-left: 0; }
+
+.contact-info md-list-item:nth-child(1) md-icon {
+  color: #66BB6A !important; }
+
+.contact-info md-list-item:nth-child(2) md-icon {
+  color: #333 !important; }
+
+.contact-info md-list-item:nth-child(3) md-icon {
+  color: #0077B5 !important; }
+
+@media (max-width: 500px) {
+  .contact-info .contact-header {
+    font-size: 36px;
+    margin-bottom: 0; }
+  .contact-info .contact-subheader {
+    font-size: 20px;
+    margin-bottom: 8px; }
+  .contact-info a {
+    font-size: 20px; }
+  .contact-info md-list-item md-icon {
+    margin-right: 18px; } }

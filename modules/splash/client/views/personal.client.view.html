@@ -1,30 +1,31 @@
 <section data-ng-controller="PersonalController">
-	<div layout="row" layout-align="space-around" class="personal-selector">
-		<div layout="row" layout-align="center center" class="life-circle-container">
+	<div layout="row" layout-wrap layout-align="space-around" layout-align-sm="center" class="personal-selector">
+		<div layout="row" layout-align-gt-sm="center center" layout-align-sm="end" class="life-circle-container" flex="25" flex-sm="50">
 			<div ng-click="setLocation('florida')" class="life-circle md-whiteframe-z1">
 				<h3>Florida</h3>
 			</div>
 		</div>
-		<div layout="row" layout-align="center center" class="life-circle-container">
+		<div layout="row" layout-align-gt-sm="center center" layout-align-sm="start" class="life-circle-container" flex="25" flex-sm="50">
 			<div ng-click="setLocation('princeton')" class="life-circle md-whiteframe-z1">
 				<h3>Princeton</h3>
 			</div>
 		</div>
-		<div layout="row" layout-align="center center" class="life-circle-container">
+		<div layout="row" layout-align-gt-sm="center center" layout-align-sm="end" class="life-circle-container" flex="25" flex-sm="50">
 			<div ng-click="setLocation('newyork')" class="life-circle md-whiteframe-z1">
 				<h3>New York</h3>
 			</div>
 		</div>
-		<div layout="row" layout-align="center center" class="life-circle-container">
+		<div layout="row" layout-align-gt-sm="center center" layout-align-sm="start"class="life-circle-container" flex="25" flex-sm="50">
 			<div ng-click="setLocation('europe')" class="life-circle md-whiteframe-z1">
 				<h3>Europe</h3>
 			</div>
 		</div>
 	</div>
+
 	<div class="personal-content" layout="column" layout-align="start center" ng-switch="location">
+	  
 	  <div ng-switch-when="welcome">
 		  <div layout="column" layout-align="start center">
-		  <br><br><br>
 		  	<h2 class="text-center">Each of these places is a special part of who I am and what I've done</h2>
 		  	<h3>Go ahead, have a click!</h3>
 		  </div>
@@ -81,11 +82,11 @@
 		  <div layout="column" layout-align="start start">
 			<h4>Career</h4>
 				<p>
-				 Summer internships with Memrise.com and Macmillan Ventures.  Three great years at BlackRock, in a dream role that combined financial engineering with client interaction.  Built advanced tools for simulating portfolio risk, optimizing portfolio construction, and modeling historical data.  Pitched and presented analytical content to executives at major corporate and government institutions.
+				 Summer internships with Memrise.com and Macmillan Ventures.  Three years at BlackRock, in a dream role that combined financial engineering with client interaction.  Built advanced tools for simulating portfolio risk, optimizing portfolio construction, and modeling historical data.  Pitched and presented analytical content to executives at major corporate and government institutions.
 				</p>
 			<h4>Interests</h4>
 				<p>
-				Exploring a city of mythic proportions - concerts, museums, parks, nightlife, restaurants (especially BBQ), escaping the cold, escaping the heat, the subway, the Met, speakeasies, gritty, posh, everything and anything all at once.   
+				Concerts, museums, parks, nightlife, restaurants (especially BBQ), escaping the cold, escaping the heat, the subway, the MoMa.   
 				</p>
 			<h4>Favorite Experiences</h4>
 				<p>

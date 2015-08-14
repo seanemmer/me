@@ -18,7 +18,6 @@ module.exports = {
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/angular-ui-utils/ui-utils.js'
       ],
-      tests: ['public/lib/angular-mocks/angular-mocks.js']
     },
     css: [
       'modules/*/client/css/*.css'
