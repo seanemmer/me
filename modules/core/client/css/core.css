@@ -56,14 +56,17 @@ md-fab-speed-dial md-icon {
     right: calc(50% - 188px); }
 
 @media (max-width: 550px) {
-  .jumbotron .jumbotron-header {
-    font-size: 40px;
-    height: 96px; }
-  .jumbotron .jumbotron-subheader {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.4em; }
-  .jumbotron md-fab-speed-dial {
-    position: relative;
-    top: 18px;
-    left: 0; } }
+  .jumbotron {
+    margin-top: 0; }
+    .jumbotron .jumbotron-header {
+      font-size: 40px;
+      height: 96px;
+      margin-bottom: 0; }
+    .jumbotron .jumbotron-subheader {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.4em; }
+    .jumbotron md-fab-speed-dial {
+      position: relative;
+      top: 18px;
+      left: 0; } }
