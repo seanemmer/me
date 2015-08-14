@@ -185,6 +185,7 @@ md-grid-tile:hover {
 
 @media (max-width: 420px) {
 	.project-dialog {
+		max-height: 454px;
 		md-list md-icon {
 			display: none;
 		}
